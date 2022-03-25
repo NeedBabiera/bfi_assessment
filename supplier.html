@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supplier</title>
+    <link rel="stylesheet" href="gui.css">
+    <script>  
+        document.addEventListener('DOMContentLoaded',function(){
+            //default state of forms
+            document.querySelector('#formSupplier').style.display = "none";
+
+            //button add supplier events
+            document.querySelector('#btnAddSupp').onclick = () => {
+                document.querySelector('#formSupplier').style.display = "block";
+            }
+            document.querySelector('#btnSaveSupp').onclick = () =>{
+
+                document.querySelector('#formSupplier').style.display = "none";
+
+                
+            }
+        })
+    </script>
+</head>
+<body>
+    <div class="grid">
+        <!-- ADD SUPPLIER form START -->
+        <div class="grid-item">
+            <h1>  
+                <div class="btn">
+                <input id="btnAddSupp" type = "submit" value="ADD SUPPLIER">
+                </div>
+            </h1>
+            <form id="formSupplier" method="POST" action="supplier.php">
+                <div class="txtField">
+                    <input type = "input" placeholder="Name or Company" name="suppName">
+                </div>
+                <div class="txtField">
+                    <input type = "input" placeholder="Contact No." name="suppContactNo">
+                </div >
+                <div class="txtField">
+                    <input type = "input" placeholder="Address" name="suppAddress">
+                </div>
+                <div class="btn">
+                    <input id="btnSaveSupp" type = "submit" value="SAVE" name="submitSupp">
+                </div>
+            </form>
+        </div>
+        <!-- ADD SUPPLIER form END -->
+    </div>
+
+
+</body>
+</html>
